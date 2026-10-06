@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ember &amp; Oak — Where fire becomes flavor (Concept)</title>
+  <meta name="description" content="Ember & Oak is a fictional live-fire fine-dining restaurant concept, created as a web-design portfolio project.">
+  <meta name="theme-color" content="#0d0b0a">
+
+  <!-- Adds the "js" class early so scroll-reveal styles only apply when JavaScript runs -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Custom cursor (desktop, fine pointers only; created visually in CSS, driven by script.js) -->
+  <div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
+
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header class="site-header" id="top">
+    <div class="site-header__inner">
+      <a class="logo" href="#top" aria-label="Ember &amp; Oak — back to top">Ember <span>&amp;</span> Oak</a>
+
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#private-dining">Private Dining</a></li>
+          <li><a href="#visit">Visit</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn btn--small btn--ghost nav__cta" href="#reserve"><span>Reserve a table</span></a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="menu-toggle__label">Menu</span>
+        <span class="menu-toggle__bars" aria-hidden="true"><i></i><i></i></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Full-screen mobile menu -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav aria-label="Mobile">
+      <ul>
+        <li style="--i:0"><a href="#about">About</a></li>
+        <li style="--i:1"><a href="#menu">Menu</a></li>
+        <li style="--i:2"><a href="#experience">Experience</a></li>
+        <li style="--i:3"><a href="#private-dining">Private Dining</a></li>
+        <li style="--i:4"><a href="#visit">Visit</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-menu__foot">
+      <a class="btn btn--primary" href="#reserve"><span>Reserve a table</span></a>
+      <p>Fictional concept · Tue — Sat · Dinner</p>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__media" data-parallax="0.12">
+        <img src="assets/hero.svg" width="1920" height="1200" fetchpriority="high"
+             alt="Placeholder image: a candlelit dining room with an open hearth glowing in the background">
+      </div>
+      <div class="hero__veil" aria-hidden="true"></div>
+      <div class="hero__shade" aria-hidden="true"></div>
+
+      <div class="container hero__content">
+        <p class="eyebrow hero__eyebrow">Wood · Fire · Craft</p>
+        <h1 class="hero__title" id="hero-title">
+          <span class="line"><span class="line__inner">Where fire</span></span>
+          <span class="line"><span class="line__inner"><em>becomes</em> flavor.</span></span>
+        </h1>
+        <p class="hero__lede">A contemporary dining experience shaped by live fire, seasonal ingredients, and evenings meant to linger.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#reserve"><span>Reserve a table</span></a>
+          <a class="btn btn--ghost" href="#menu"><span>Explore the menu</span></a>
+        </div>
+      </div>
+
+      <div class="container hero__meta">
+        <p><strong>Dinner · Tue—Sat</strong><span>Concept dining district</span></p>
+        <p class="hero__concept">A fictional restaurant concept</p>
+      </div>
+      <span class="hero__line" aria-hidden="true"></span>
+    </section>
+
+    <!-- ===================== INTRODUCTION ===================== -->
+    <section class="section intro" id="about" aria-labelledby="about-title">
+      <div class="container intro__grid">
+        <div class="intro__text">
+          <p class="label" data-reveal>The philosophy</p>
+          <h2 class="display" id="about-title" data-reveal style="--d:.08s">Built around<br>the <em>fire.</em></h2>
+          <p class="lead" data-reveal style="--d:.16s">At Ember &amp; Oak, the hearth is more than a cooking method. It shapes the pace, flavor, and character of the evening.</p>
+          <p data-reveal style="--d:.24s">Imagined as a single room organised around an open fire, the concept follows the seasons: a short menu, a slow rhythm, and plates finished over oak and embers. Nothing is rushed. The glow sets the tempo, and the table follows.</p>
+          <ul class="intro__facts" data-reveal style="--d:.32s">
+            <li><span>Live fire</span>Oak and ember cooking</li>
+            <li><span>Seasonal</span>A short, changing menu</li>
+            <li><span>Intimate</span>A room made for lingering</li>
+          </ul>
+        </div>
+
+        <div class="intro__visual">
+          <figure class="media reveal-img intro__figure" data-reveal-img>
+            <div class="media__parallax" data-parallax="0.08">
+              <img src="assets/philosophy.svg" width="900" height="1200" loading="lazy"
+                   alt="Placeholder image: warm firelight falling across dark oak and brass details">
+            </div>
+          </figure>
+          <p class="vertical-label" aria-hidden="true">Fire / Season / Craft</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SIGNATURE DISHES ===================== -->
+    <section class="section signature" id="signature" aria-labelledby="signature-title">
+      <div class="container">
+        <header class="section-head">
+          <div>
+            <p class="label" data-reveal>Signature dishes</p>
+            <h2 class="display" id="signature-title" data-reveal style="--d:.08s">From the <em>fire</em></h2>
+          </div>
+          <p class="section-head__note" data-reveal style="--d:.16s">Concept menu items shown for design purposes only — not real restaurant offerings.</p>
+        </header>
+
+        <ol class="dishes">
+          <li class="dish">
+            <figure class="media reveal-img dish__img" data-reveal-img>
+              <div class="media__parallax"><img src="assets/dish-ribeye.svg" width="800" height="1000" loading="lazy" alt="Placeholder image for the ember-cured ribeye dish"></div>
+            </figure>
+            <div class="dish__body" data-reveal>
+              <span class="dish__num">01</span>
+              <h3>Ember-cured ribeye</h3>
+              <p>Charred crust · smoked shallot · ember jus</p>
+            </div>
+          </li>
+          <li class="dish">
+            <figure class="media reveal-img dish__img" data-reveal-img>
+              <div class="media__parallax"><img src="assets/dish-roots.svg" width="800" height="1000" loading="lazy" alt="Placeholder image for the fire-roasted roots dish"></div>
+            </figure>
+            <div class="dish__body" data-reveal>
+              <span class="dish__num">02</span>
+              <h3>Fire-roasted roots</h3>
+              <p>Seasonal vegetables · brown butter · herbs</p>
+            </div>
+          </li>
+          <li class="dish">
+            <figure class="media reveal-img dish__img" data-reveal-img>
+              <div class="media__parallax"><img src="assets/dish-octopus.svg" width="800" height="1000" loading="lazy" alt="Placeholder image for the charred octopus dish"></div>
+            </figure>
+            <div class="dish__body" data-reveal>
+              <span class="dish__num">03</span>
+              <h3>Charred octopus</h3>
+              <p>Coal-roasted · citrus · smoked paprika</p>
+            </div>
+          </li>
+          <li class="dish">
+            <figure class="media reveal-img dish__img" data-reveal-img>
+              <div class="media__parallax"><img src="assets/dish-pear.svg" width="800" height="1000" loading="lazy" alt="Placeholder image for the oak-smoked pear dessert"></div>
+            </figure>
+            <div class="dish__body" data-reveal>
+              <span class="dish__num">04</span>
+              <h3>Oak-smoked pear</h3>
+              <p>Vanilla · toasted oat · warm caramel</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== INTERACTIVE MENU ===================== -->
+    <section class="section menu" id="menu" aria-labelledby="menu-title">
+      <div class="container">
+        <header class="section-head section-head--stack">
+          <p class="label" data-reveal>The menu</p>
+          <h2 class="display" id="menu-title" data-reveal style="--d:.08s">An evening, <em>in courses</em></h2>
+        </header>
+
+        <div class="menu__tabs-wrap" data-reveal style="--d:.14s">
+          <div class="menu__tabs" role="tablist" aria-label="Menu categories">
+            <button type="button" role="tab" id="tab-small" aria-controls="menu-panel" aria-selected="true" data-cat="small">Small plates</button>
+            <button type="button" role="tab" id="tab-fire" aria-controls="menu-panel" aria-selected="false" tabindex="-1" data-cat="fire">From the fire</button>
+            <button type="button" role="tab" id="tab-sides" aria-controls="menu-panel" aria-selected="false" tabindex="-1" data-cat="sides">Sides</button>
+            <button type="button" role="tab" id="tab-dessert" aria-controls="menu-panel" aria-selected="false" tabindex="-1" data-cat="dessert">Dessert</button>
+            <button type="button" role="tab" id="tab-drinks" aria-controls="menu-panel" aria-selected="false" tabindex="-1" data-cat="drinks">Drinks</button>
+          </div>
+        </div>
+
+        <div class="menu__layout">
+          <div class="menu__sheet" data-reveal style="--d:.2s">
+            <div class="menu__panel" id="menu-panel" role="tabpanel" aria-labelledby="tab-small" tabindex="0">
+              <h3 class="menu__cat-title" id="menu-cat-title">Small plates</h3>
+              <ul class="menu__list" id="menu-list"></ul>
+              <noscript><p class="menu__noscript">The interactive menu needs JavaScript. Signature dishes above show a preview of the concept menu.</p></noscript>
+            </div>
+            <p class="menu__note">All dishes and prices are fictional sample content for a web-design concept.</p>
+          </div>
+
+          <aside class="menu__preview" aria-hidden="true">
+            <div class="menu__preview-frame">
+              <img id="menu-preview-img" src="assets/hover-small.svg" width="640" height="760" loading="lazy" alt="">
+            </div>
+            <p class="menu__preview-cap">Hover a dish to preview</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== THE EXPERIENCE ===================== -->
+    <section class="section experience" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <header class="section-head section-head--stack">
+          <p class="label" data-reveal>The experience</p>
+          <h2 class="display" id="experience-title" data-reveal style="--d:.08s">An evening worth <em>staying for.</em></h2>
+        </header>
+
+        <div class="experience__stage">
+          <figure class="media reveal-img experience__figure" data-reveal-img>
+            <div class="media__parallax" data-parallax="0.08">
+              <img src="assets/experience.svg" width="1800" height="1100" loading="lazy"
+                   alt="Placeholder image: a corner table in low light, wood surfaces warmed by the hearth">
+            </div>
+          </figure>
+
+          <article class="moment moment--1" data-reveal style="--d:.1s">
+            <span class="moment__num">01 — Arrive</span>
+            <p>Low light. Warm wood. The first pour.</p>
+          </article>
+          <article class="moment moment--2" data-reveal style="--d:.35s">
+            <span class="moment__num">02 — Gather</span>
+            <p>Plates arrive from the hearth. Conversations stretch a little longer.</p>
+          </article>
+          <article class="moment moment--3" data-reveal style="--d:.6s">
+            <span class="moment__num">03 — Linger</span>
+            <p>Dessert, another drink, and nowhere else to be.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FIRE / CRAFT ===================== -->
+    <section class="fire" aria-labelledby="fire-title" data-fire>
+      <div class="fire__bg" data-parallax="0.14">
+        <img src="assets/fire.svg" width="2000" height="1100" loading="lazy"
+             alt="Placeholder image: glowing embers beneath a grill of blackened oak">
+      </div>
+      <div class="fire__shade" aria-hidden="true"></div>
+      <div class="container fire__content">
+        <p class="label" data-reveal>Fire / Craft</p>
+        <h2 class="fire__statement" id="fire-title" data-reveal style="--d:.08s">Fire changes<br>everything.</h2>
+        <span class="fire__line" aria-hidden="true"></span>
+        <p class="fire__text" data-reveal style="--d:.3s">Live fire is unforgiving and generous in equal measure. Oak builds the heat, embers hold it steady, and each ingredient is placed where it needs to be — close enough to take on colour and smoke, far enough to stay tender. It is a slower way to cook, and the plate shows it.</p>
+      </div>
+    </section>
+
+    <!-- ===================== PRIVATE DINING ===================== -->
+    <section class="section private" id="private-dining" aria-labelledby="private-title">
+      <div class="container private__grid">
+        <div class="private__visual">
+          <figure class="media reveal-img private__figure" data-reveal-img>
+            <div class="media__parallax" data-parallax="0.08">
+              <img src="assets/private.svg" width="1000" height="1250" loading="lazy"
+                   alt="Placeholder image: a long wooden table set for an intimate private dinner">
+            </div>
+          </figure>
+        </div>
+
+        <div class="private__text">
+          <p class="label" data-reveal>Private dining</p>
+          <h2 class="display" id="private-title" data-reveal style="--d:.08s">Gather around <em>the table.</em></h2>
+          <p class="lead" data-reveal style="--d:.16s">In this concept, a candlelit room beside the hearth is set aside for the evenings that matter — shaped with the kitchen around your guests and your pace.</p>
+
+          <ul class="occasions" data-reveal style="--d:.24s">
+            <li><h3>Intimate dinners</h3><p>A quiet table for a small group, with a menu paced to the conversation.</p></li>
+            <li><h3>Celebrations</h3><p>Birthdays and milestones, marked with a considered, shared menu.</p></li>
+            <li><h3>Private gatherings</h3><p>Family, friends, colleagues — a room that keeps the evening yours.</p></li>
+            <li><h3>Special occasions</h3><p>The nights worth planning, with fire and candlelight doing the rest.</p></li>
+          </ul>
+
+          <div data-reveal style="--d:.32s">
+            <button class="btn btn--primary" type="button" data-open-modal aria-haspopup="dialog"><span>Private dining enquiry</span></button>
+            <p class="fineprint">Concept experience — enquiries are not currently submitted.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== RESERVATION ===================== -->
+    <section class="section reserve" id="reserve" aria-labelledby="reserve-title">
+      <div class="container reserve__wrap">
+        <header class="section-head section-head--stack section-head--center">
+          <p class="label" data-reveal>Reservations</p>
+          <h2 class="display" id="reserve-title" data-reveal style="--d:.08s">Your table <em>awaits.</em></h2>
+          <p class="reserve__intro" data-reveal style="--d:.16s">Try the reservation interface below. It is a design demonstration — nothing is booked or sent.</p>
+        </header>
+
+        <form class="reserve__form" id="reserve-form" novalidate data-reveal style="--d:.22s">
+          <div class="field">
+            <label for="res-date">Date</label>
+            <input type="date" id="res-date" name="date" required>
+          </div>
+
+          <div class="field">
+            <span class="field__label" id="guests-label">Guests</span>
+            <div class="stepper" role="group" aria-labelledby="guests-label">
+              <button type="button" class="stepper__btn" data-step="-1" aria-label="Fewer guests">−</button>
+              <output id="res-guests" aria-live="polite">2</output>
+              <button type="button" class="stepper__btn" data-step="1" aria-label="More guests">+</button>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="res-time">Time</label>
+            <div class="select-wrap">
+              <select id="res-time" name="time"></select>
+            </div>
+          </div>
+
+          <button class="btn btn--primary reserve__submit" type="submit"><span>Check availability</span></button>
+
+          <p class="reserve__error" id="res-error" role="alert" hidden>Please choose a date to preview availability.</p>
+        </form>
+
+        <div class="reserve__result" id="res-result" role="status" aria-live="polite" hidden>
+          <p class="reserve__summary" id="res-summary"></p>
+          <div class="reserve__slots" id="res-slots" aria-label="Sample times"></div>
+          <p class="reserve__concept">This is a concept reservation experience. No real reservation has been made.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== VISIT ===================== -->
+    <section class="section visit" id="visit" aria-labelledby="visit-title">
+      <div class="container visit__grid">
+        <div class="visit__text">
+          <p class="label" data-reveal>Concept location</p>
+          <h2 class="display" id="visit-title" data-reveal style="--d:.08s">Visit <em>us.</em></h2>
+
+          <address class="visit__details" data-reveal style="--d:.16s">
+            <p class="visit__name">Ember &amp; Oak</p>
+            <p>Concept Dining District</p>
+            <p>Open Tuesday — Saturday</p>
+            <p>5:30 PM — 11:00 PM</p>
+          </address>
+          <p class="fineprint" data-reveal style="--d:.2s">Fictional concept information. Ember &amp; Oak is not a real restaurant and has no real address.</p>
+
+          <div data-reveal style="--d:.26s">
+            <button class="btn btn--ghost" type="button" id="directions-btn"><span>Get directions</span></button>
+            <p class="visit__directions-note" id="directions-note" role="status" aria-live="polite" hidden>Concept location — there are no directions to a fictional restaurant.</p>
+          </div>
+        </div>
+
+        <figure class="visit__map reveal-img" data-reveal-img aria-label="Abstract illustration of a concept dining district">
+          <svg viewBox="0 0 600 460" role="img" aria-label="Abstract line illustration of a concept dining district — not a real map">
+            <g fill="none" stroke="currentColor" stroke-width="1" opacity=".45">
+              <path d="M0 120 H600"/><path d="M0 250 H600"/><path d="M0 360 H600"/>
+              <path d="M110 0 V460"/><path d="M290 0 V460"/><path d="M470 0 V460"/>
+              <path d="M0 40 L220 460" opacity=".5"/><path d="M380 0 L600 300" opacity=".5"/>
+            </g>
+            <circle cx="290" cy="250" r="46" fill="none" stroke="currentColor" opacity=".35"/>
+            <circle cx="290" cy="250" r="86" fill="none" stroke="currentColor" opacity=".18"/>
+            <circle cx="290" cy="250" r="6" fill="currentColor"/>
+          </svg>
+          <figcaption>Concept Dining District · illustrative only</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer__embers" aria-hidden="true"></div>
+    <div class="container">
+      <p class="footer__wordmark" aria-hidden="true">Ember &amp; Oak</p>
+      <div class="footer__row">
+        <p class="footer__tag">Fire. Flavor. Time.</p>
+        <nav aria-label="Footer">
+          <ul class="footer__nav">
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#private-dining">Private Dining</a></li>
+            <li><a href="#reserve">Reserve</a></li>
+            <li><a href="#visit">Visit</a></li>
+          </ul>
+        </nav>
+      </div>
+      <span class="footer__rule" aria-hidden="true"></span>
+      <div class="footer__legal">
+        <p>Ember &amp; Oak is a fictional restaurant concept created as a web-design project.</p>
+        <p>&copy; <span id="year">2026</span> Ember &amp; Oak concept. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== PRIVATE DINING MODAL ===================== -->
+  <dialog class="modal" id="enquiry-modal" aria-labelledby="modal-title">
+    <div class="modal__panel">
+      <button class="modal__close" type="button" data-close-modal aria-label="Close enquiry form">
+        <span aria-hidden="true">×</span>
+      </button>
+      <p class="label">Private dining</p>
+      <h2 class="modal__title" id="modal-title">Private dining enquiry</h2>
+      <p class="modal__lede">A static preview of how an enquiry form could feel. No personal details are collected.</p>
+
+      <form id="enquiry-form" novalidate>
+        <div class="field">
+          <label for="enq-occasion">Occasion</label>
+          <div class="select-wrap">
+            <select id="enq-occasion">
+              <option>Intimate dinner</option>
+              <option>Celebration</option>
+              <option>Private gathering</option>
+              <option>Special occasion</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="enq-guests">Approximate guests</label>
+          <div class="select-wrap">
+            <select id="enq-guests">
+              <option>4 — 6</option>
+              <option>7 — 10</option>
+              <option>11 — 16</option>
+              <option>17 — 24</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="enq-notes">Notes for the evening <span class="optional">(optional)</span></label>
+          <textarea id="enq-notes" rows="3" placeholder="Anything that would make the evening yours…"></textarea>
+        </div>
+        <button class="btn btn--primary" type="submit"><span>Preview enquiry</span></button>
+      </form>
+
+      <p class="modal__result" id="enquiry-result" role="status" aria-live="polite" hidden>Thank you for trying the preview. Concept experience — nothing has been sent, and enquiries are not currently submitted.</p>
+      <p class="fineprint">Concept experience — enquiries are not currently submitted.</p>
+    </div>
+  </dialog>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
